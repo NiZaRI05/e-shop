@@ -1,0 +1,70 @@
+Paso 1: Actualizar el sistema
+sudo apt update && sudo apt upgrade -y
+
+
+Paso 2: Instalar python y herramientas basicas
+sudo apt install python3 python3-pip python3-venv git -y
+
+
+Paso 3: Instalar MySQL o MariaDB
+sudo apt install mariadb-server mariadb-client -y
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+
+
+Paso 4: Crear la base de datos y un usuario para el proyecto
+sudo mysql -u root -p
+
+CREATE DATABASE ecommerce_db;
+CREATE USER 'ecommerce_user'@'localhost' IDENTIFIED BY '123456'
+GRANT ALL PRIVILEGES ON ecommerce_db.* TO 'ecommerce_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+
+Paso 5: Crear la carpeta del proyecto
+mkdir e-shop
+cd e-shop
+
+
+Paso 6: Crear el entorno virtual de python, activar e instalar paquetes necesarios
+python3 -m venv venv
+source venv/bin/activate
+pip install flask flask-sqlalchemy flask-migrate pymysql python-dotenv flask-login
+
+
+Paso 7: Crear el repositorio de git
+git init
+echo "venv/" > .gitignore
+echo ".env" >> .gitignore
+
+
+Paso 8: Crear archivo de requirements.txt
+pip freeze > requirements.txt
+
+
+Paso 9: Crear el primer commit
+git add .
+git commit -m "Setup inicial del proyecto"
+
+
+Paso 10: Crear un repositorio em GitHub
+
+
+Paso 11: Subir el proyecto a un repositorio de GitHub
+
+
+Paso 12: Crear un directorio de trabajo
+
+
+Paso 13: Abrir el repositorio del proyecto
+
+
+Paso 14: Copiar la direccion https deñ proyecto
+
+
+Paso 15: Dentro del directorio de trabajo, abrir GitBash
+
+ 
+Paso 16: CLonar el repositorio
+git clone . . . . . . . . . . .
