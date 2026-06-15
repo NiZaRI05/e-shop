@@ -60,7 +60,7 @@ Paso 12: Crear un directorio de trabajo
 Paso 13: Abrir el repositorio del proyecto
 
 
-Paso 14: Copiar la direccion https deñ proyecto
+Paso 14: Copiar la direccion https/ssh del proyecto
 
 
 Paso 15: Dentro del directorio de trabajo, abrir GitBash
@@ -68,3 +68,12 @@ Paso 15: Dentro del directorio de trabajo, abrir GitBash
  
 Paso 16: CLonar el repositorio
 git clone . . . . . . . . . . .
+
+Paso 17: Ingresar a la carpeta 
+cd e-shop/
+
+
+Paso 18: Crear el entorno virtual, activar e instalar libs
+python -m venv .venv
+source .venv/Scripts/activate
+pip install -r requirements.txt
