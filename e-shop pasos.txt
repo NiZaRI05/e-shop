@@ -83,3 +83,43 @@ pip install -r requirements.txt
 
 PRACTICA 04: ESTRUCTURA DEL PROYECTO Y CONEXION
 1. Estructura de carpetas
+
+e-shop/
+├── app/
+│   ├── blueprints/
+│   │   ├── admin/
+│   │   │   ├── __init__.py
+│   │   │   └── routes.py
+│   │   ├── auth/
+│   │   │   ├── __init__.py
+│   │   │   └── routes.py
+│   │   └── public/
+│   │       ├── __init__.py
+│   │       └── routes.py
+│   ├── config.py
+│   ├── __init__.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── pedido.py
+│   │   ├── producto.py
+│   │   └── usuario.py
+│   ├── static/
+│   │   ├── css/
+│   │   └── js/
+│   └── templates/
+│       ├── admin/
+│       ├── auth/
+│       ├── base.html
+│       └── public/
+├── requirements.txt
+└── run.py
+
+2. Crear las variables de configuracion
+FLASK_ENV=development
+SECRET KEY=1234567891011121314151617181920
+DB_USER=ecommerce_db
+DB_PASSWORD=123456
+DB_HOST=localhost
+DB_NAME=ecommerce_db
+
+3. Crear configuraciones iniciales en config.py
