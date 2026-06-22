@@ -77,3 +77,9 @@ Paso 18: Crear el entorno virtual, activar e instalar libs
 python -m venv .venv
 source .venv/Scripts/activate
 pip install -r requirements.txt
+
+
+
+
+PRACTICA 04: ESTRUCTURA DEL PROYECTO Y CONEXION
+1. Estructura de carpetas
