@@ -9,10 +9,14 @@ class Usuario(db.Model): # <--- 'Model' con M mayúscula
     nombre = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(256), nullable=False)
-    rol = db.Column(db.Enum('cliente', 'admin', name='roles_enum'), default='cliente') # <--- Nombre al Enum
+    rol = db.Column(db.Enum('cliente', 'admin', name='roles_enum'), default='cliente')
     activo = db.Column(db.Boolean, default=True)
-    creado_en = db.Column(db.DateTime, default=datetime.now) # <--- Sin paréntesis '()'
+    creado_en = db.Column(db.DateTime, default=datetime.now)
 
+    # Relacion: Un usuario tiene muchos pedidos
+    pedidos = db.relationship('pedido', backref='client', lazy=True)
+
+    
     # -- Métodos de contraseña
     def set_password(self, password_plano):
         """ Hash a la contraseña en texto plano """
@@ -20,7 +24,7 @@ class Usuario(db.Model): # <--- 'Model' con M mayúscula
     
     def check_password(self, passwd):
         """ Compara el texto plano con la contraseña hash """
-        return check_password_hash(self.password, passwd) # <--- Corregido el parámetro y la variable
+        return check_password_hash(self.password, passwd) 
     
     def es_admin(self):
         return self.rol == "admin"
