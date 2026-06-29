@@ -16,7 +16,6 @@ class Usuario(db.Model): # <--- 'Model' con M mayúscula
     # Relacion: Un usuario tiene muchos pedidos
     pedidos = db.relationship('pedido', backref='client', lazy=True)
 
-    
     # -- Métodos de contraseña
     def set_password(self, password_plano):
         """ Hash a la contraseña en texto plano """

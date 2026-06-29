@@ -123,3 +123,27 @@ DB_HOST=localhost
 DB_NAME=ecommerce_db
 
 3. Crear configuraciones iniciales en config.py
+
+
+Práctica 05: Terminar modelos
+Descargar los archivos .py del AVAC
+
+Copiar los archivos a la carpeta modelo (Estudiar)
+
+Exportar las nuevas clases modelo (models/__init__.py)
+
+Configurar las nuevas clases en el factory (app/__init__.py)
+
+Migrar a la base de datos
+
+Demostrar que las tablas se han creado
+> describe [tabla];
+
+Copiar el archivo seed.py dentro de la carpeta del proyecto
+
+Ejecutar el seed.py
+(venv) $ python seed.py
+
+Verificar que los datos de prueba se han creado en la BDD
+
+Hacer un informe
